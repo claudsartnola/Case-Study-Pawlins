@@ -1,0 +1,226 @@
+<style>
+  .topnav {
+  background-color: #ff6053;
+  overflow: hidden;
+    font-family: arial, sans-serif;
+    color:#ff6053;
+}
+  
+  .topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+    display: block;
+}
+  
+  .topnav a:hover {
+  background-color: #f73319;
+  color: white;
+    font-weight:bold;
+}
+  
+  .topnav a.active {
+  background-color: #7d0202;
+  color: white;
+}
+  
+  .subnav {
+    list-style-type:none;
+  overflow: hidden;
+    font-family: arial, sans-serif;
+    color:#b03b28;
+  }
+   .subnav a {
+      background-color: #fff04f;
+  color: #2875b0;
+  text-align: center;
+  padding: 9px 9px;
+  text-decoration: none;
+  font-size: 13px;
+    display: block;
+     font-weight:bold;
+ 
+}
+    .subnav a:hover {
+  background-color: #f73319;
+  color: white;
+    font-weight:bold;
+}
+  .subnav a.active {
+  background-color: #2875b0;
+  color: white;
+}
+ 
+   h1
+  {
+    font-family: arial, sans-serif;
+    color:#ff6053;
+  }
+  
+ h2
+  {
+    font-family: arial, sans-serif;
+    color: #4da691;
+  }
+  
+  p
+   {
+    font-family: arial, sans-serif;
+    font-size: 12px;
+   }
+    
+h3
+  {
+    font-family: arial, sans-serif;
+    color: #ce8131;
+  }
+  
+  p, ul, li
+   {
+    font-family: arial, sans-serif;
+    font-size: 12px;
+     color:black;
+   }
+  
+  .li-space{
+    padding: 5px;
+  }
+  
+  table {
+  border-collapse: collapse;
+}
+  
+  table, th, td {
+     padding: 7px;
+     font-family: arial, sans-serif;
+    text-align: left;
+    vertical-align: center;
+    border: 1px solid #ddd;
+    margin: 5PX;
+}
+  
+  th
+  {    
+    background-color:#03a1fc;
+    color: white;  
+    font-size: 14px;    
+  }
+  
+  tr{
+    font-size: 12px;
+  }
+  
+  .pricesm{
+     color:#ff6053;
+    font-weight:bold;
+  }
+  
+  .lightbluebg{
+  background-color:#edf8ff;  
+  }
+button.accordion {
+    background-color: #ff6053;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  button.accordion.active,
+  button.accordion:hover {
+    background-color: #fc9a86;
+  }
+  
+  button.accordion:after {
+    content: '\002B';
+    color: #8a602d;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  button.accordion.active:after {
+    content: "\2212";
+  }
+  
+  
+  
+
+  div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+</style>
+
+<div class="topnav">
+  <a href="#requirements">Requirements</a>
+  <a  href="#news">Interviews</a>
+  <a  href="#contact">About Pawlins</a>
+  <a class="active" href="#about">Services</a>
+</div>
+
+<ul class="subnav" style="padding-inline-start:0px;">
+  <li><a   href="#requirements">Play</a></li>
+   <li><a href="#requirements">Stay</a></li>
+   <li><a href="#requirements">Grooming</a></li>
+   <li><a  class="active" href="#requirements">Wellness</a></li>
+     <li><a href="#requirements">A la carte</a></li>
+</ul>
+
+<h1>Wellness<h1>
+
+<h2>RRVH</h2>
+
+  <p>River Road Veterinary Hospital is our partner and their building is attached to ours. There is always a vet on site. Because of this partnership, you may have your pets annual vaccinations done while at daycare!</p>
+
+  <h2>Safe and clean environment</h2>
+  <p>Pawlins is a state of the art facility and is built to provide the best care possible. </p>
+<ul>
+  <li class="li-space"> Our canine grass has an irrigation system and will be sanitized every day.</li>
+<li class="li-space">All of the enclosures are designed to prevent cross contamination, never allowing fluids to migrate</li>
+<li class="li-space">Hospital grade rubber floors that are impervious to odor and bacteria and are gentle on their joints</li>
+<li class="li-space">Our splash park is designed so that it can be efficiently and quickly cleaned. </li>
+<li class="li-space">We also filter the air with essential lavender oil which smells nice and is also calming for the dogs.</li>
+<li class="li-space">We use a central wet/dry cleaning system so that no dirty mops are ever needed</li>
+<li class="li-space">We have a fresh air exchange system that operates every 6 minutes.</li>
+</ul>
+</div>
+
+  
+  
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling || nextElementSibling(this);
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    }
+  }
+
+
+  function nextElementSibling(el) {
+    do {
+      el = el.nextSibling
+    } while (el && el.nodeType !== 1);
+    return el;
+  }
+</script>
